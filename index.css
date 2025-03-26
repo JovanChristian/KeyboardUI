@@ -1,16 +1,93 @@
-body{
+/* styles.css */
+body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
     background-color: #f5f5f5;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: Arial, sans-serif;
 }
 
-.keyboard{
-    color: #fff;
+.keyboard {
+    background-color: #fff;
     padding: 20px;
-    border: 15px;
+    border-radius: 15px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+    /* Increased gap for better spacing */
+    margin-bottom: 10px;
+    /* Increased margin for row spacing */
+}
+
+.key {
+    background-color: #fff;
+    border: none;
+    border-radius: 10px;
+    /* Slightly larger border-radius */
+    padding: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    /* More pronounced shadow */
+    transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.key:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.key:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Emoji Keys with Colors */
+.key.emoji {
+    font-size: 24px;
+    /* Larger emojis */
+    padding: 12px;
+    /* Adjusted padding for emoji keys */
+}
+
+.key.red {
+    background-color: #ff6b6b;
+}
+
+.key.yellow {
+    background-color: #ffd93d;
+}
+
+.key.green {
+    background-color: #6bcf6b;
+}
+
+.key.cyan {
+    background-color: #6bd1ff;
+}
+
+.key.pink {
+    background-color: #ff6bd5;
+}
+
+.key.orange {
+    background-color: #ff9f43;
+}
+
+.key.blue {
+    background-color: #4d96ff;
+}
+
+/* Spacebar */
+.spacebar {
+    flex-grow: 2;
+    /* Wider spacebar */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
